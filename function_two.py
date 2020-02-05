@@ -18,27 +18,37 @@ def five_num_summ(items):
     sort_numbers = sorted(numbers)
     minimum = sort_numbers[0]
     maximum = sort_numbers[-1]
-#    print(sort_numbers)
-#    print(minimum)
-#    print(maximum)
+
+
     len_numbers = len(sort_numbers)
     index = (len_numbers - 1)//2
     if (len_numbers % 2 == 0):
         med = (sort_numbers[index] + sort_numbers[index+1])/2.0
-#        print(med)
+        
     else:
         med = sort_numbers[index]
-#        print(med)
+
     q1_len = len(range(0,index))
     q1_range = (q1_len-1)//2
     if q1_len % 2 == 0:
         q1 = (sort_numbers[q1_range] + sort_numbers[(q1_range+1)])/20
-#       print(q1)
+
     else:
         q1 = sort_numbers[q1_range]
-#        print(q1)
-    return {"Minimum" : minimum, "median" : med, "maximum" : maximum, " 1st quartile" : q1}
-#q2_len = len(range(int(index),-1))
-#print(q2_len)
 
-print(five_num_summ(gauteng))
+
+    rev_sort_numbers = sort_numbers[::-1]                
+    
+    q3_len = len(range(0,index))
+    q3_range = (q3_len-1)//2
+    if q3_len % 2 == 0:
+        q3 = (rev_sort_numbers[q3_range] + rev_sort_numbers[(q3_range+1)])/20
+
+    else:
+        q3 = rev_sort_numbers[q1_range]
+
+
+    return {"Minimum" : minimum, "median" : med, "maximum" : maximum, " 1st quartile" : q1 , "2nd quartile" : q3}
+
+
+print(five_num_summ(gauteng))  
