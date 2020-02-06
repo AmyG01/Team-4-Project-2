@@ -1,3 +1,8 @@
+# Some information explaining what does the function calculate
+# 
+# 
+
+# DATASET
 gauteng = [39660.0,
             36024.0,
             32127.0,
@@ -10,8 +15,8 @@ gauteng = [39660.0,
             18730.0,
             19261.0,
             25275.0]
-
-
+            
+###FUNTION START
 def dictionary_of_metrics(items) :
 
     s = 0
@@ -39,15 +44,17 @@ def dictionary_of_metrics(items) :
         sqrz_calc = (j - the_mean)**2
         sum_of_sqz = sum_of_sqz + sqrz_calc
             
-    the_varience = sum_of_sqz / (count - 1)   #varience_calculation
+    the_varience = round(sum_of_sqz / (count - 1), 2)   #varience_calculation
 
 
-    the_standard_dev = (the_varience)**(1/2)  #the_standard_deviation_calculation
+    the_standard_dev = round((the_varience)**(1/2), 2)  #the_standard_deviation_calculation
 
     the_min = sorted_items[0] 
 
     the_max = sorted_items[count - 1]
 
-    print({'mean':round(the_mean,2) ,'median':round(the_median,2) ,'varience':round(the_varience,2),'standard deviation':round(the_standard_dev,2),'min':round(the_min,2),'max':round(the_max,2)})
+    matrics_dict = {'MEAN':the_mean,'MEDIAN': the_median,'VARIENCE':the_varience,
+    'STARNDARD DEVIATION':the_standard_dev,'MIN':the_min,'MAX':the_max}
 
-dictionary_of_metrics(gauteng)
+    return(matrics_dict)
+### FUNTION END
