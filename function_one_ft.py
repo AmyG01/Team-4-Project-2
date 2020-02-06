@@ -50,29 +50,4 @@ def dictionary_of_metrics(items) :
 
     print({'mean':round(the_mean,2) ,'median':round(the_median,2) ,'varience':round(the_varience,2),'standard deviation':round(the_standard_dev,2),'min':round(the_min,2),'max':round(the_max,2)})
 
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
 dictionary_of_metrics(gauteng)
