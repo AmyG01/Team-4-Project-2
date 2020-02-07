@@ -16,7 +16,7 @@ gauteng = [39660.0,
             19261.0,
             25275.0]
             
-###FUNTION START
+###FUNCTION START
 def dictionary_of_metrics(items) :
 
     s = 0
@@ -27,7 +27,7 @@ def dictionary_of_metrics(items) :
 
         the_mean = round ( s / count , 2) #mean_calculation
 
-    
+
     sorted_items = sorted(items)
 
     if count % 2 == 1:

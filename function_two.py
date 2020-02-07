@@ -11,8 +11,10 @@ gauteng = [39660.0,
             19261.0,
             25275.0]
 
-numbers = []
-def five_num_summ(items):
+### START FUNCTION
+def five_num_summary(items):
+
+    numbers = []
     for i in items:
         numbers.append(i)
     sort_numbers = sorted(numbers)
@@ -48,7 +50,7 @@ def five_num_summ(items):
         q3 = rev_sort_numbers[q1_range]
 
 
-    return {"Minimum" : minimum, "median" : med, "maximum" : maximum, " 1st quartile" : q1 , "2nd quartile" : q3}
+    return {"Minimum" : minimum, "median" : med, "maximum" : maximum, "q1" : q1 , "q3" : q3}
 
-
-print(five_num_summ(gauteng))  
+### END FUNCTION
+print(five_num_summary(gauteng))  
