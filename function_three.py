@@ -1,21 +1,14 @@
+"""A function that takes as input a list of these datetime strings
+ and returns only the date in 'yyyy-mm-dd' format"""
+
 ### START FUNCTION
 def date_parser(dates):
-    # My idea is to convert this list into a string
-    # And then slice that string but my slice only
-    # works only once, the rest of the dates are not formated
-    #  and don't even appear
-    # any ideas
+
+    final_list = []
+    for list_01 in dates: 
+        final_list = final_list + [list_01[0:10]]   
     
-    str1 = "" 
-    for date in dates:
-        for element in date:
-            str1 += element
-            slicer = slice(0, 10)
-            str1 = str1[slicer]
-        return str(str1)
-d = ['2019-11-29 12:50:54',
-    '2019-11-29 12:46:53',
-    '2019-11-29 12:46:10']    
-print(date_parser(d))
+    
+    return final_list
 
 ### END FUNCTION
