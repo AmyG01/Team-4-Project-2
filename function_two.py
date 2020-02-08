@@ -1,21 +1,11 @@
-gauteng = [39660.0,
-            36024.0,
-            32127.0,
-            39488.0,
-            18422.0,
-            23532.0,
-            8842.0,
-            37416.0,
-            16156.0,
-            18730.0,
-            19261.0,
-            25275.0]
+"""A function which takes in a list of integers and returns a dictionary of the
+the five number summary"""
 
 ### START FUNCTION
 def five_num_summary(items):
 
     numbers = []
-    for i in items:
+    for i in items :
         numbers.append(i)
     sort_numbers = sorted(numbers)
     minimum = sort_numbers[0]
@@ -25,15 +15,15 @@ def five_num_summary(items):
     len_numbers = len(sort_numbers)
     index = (len_numbers - 1)//2
     if (len_numbers % 2 == 0):
-        med = (sort_numbers[index] + sort_numbers[index+1])/2.0
+        med = (sort_numbers[index] + sort_numbers[index+1])/2
         
     else:
         med = sort_numbers[index]
 
     q1_len = len(range(0,index))
     q1_range = (q1_len-1)//2
-    if q1_len % 2 == 0:
-        q1 = (sort_numbers[q1_range] + sort_numbers[(q1_range+1)])/20
+    if (q1_len+1) % 2 == 0:
+        q1 = (sort_numbers[q1_range] + sort_numbers[(q1_range+1)])/2
 
     else:
         q1 = sort_numbers[q1_range]
@@ -43,14 +33,15 @@ def five_num_summary(items):
     
     q3_len = len(range(0,index))
     q3_range = (q3_len-1)//2
-    if q3_len % 2 == 0:
-        q3 = (rev_sort_numbers[q3_range] + rev_sort_numbers[(q3_range+1)])/20
+    if (q3_len+1) % 2 == 0:
+        q3 = (rev_sort_numbers[q3_range] + rev_sort_numbers[(q3_range+1)])/2
 
     else:
         q3 = rev_sort_numbers[q1_range]
 
+    dict = {'max' : maximum, 'median' : med,'min' : minimum,  'q1' : q1 , 'q3' : q3}
 
-    return {"Minimum" : minimum, "median" : med, "maximum" : maximum, "q1" : q1 , "q3" : q3}
+    return dict
 
 ### END FUNCTION
-print(five_num_summary(gauteng))  
+  
