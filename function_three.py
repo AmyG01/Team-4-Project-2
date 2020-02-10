@@ -4,11 +4,11 @@
 ### START FUNCTION
 def date_parser(dates):
 
-    final_list = []
-    for list_01 in dates: 
-        final_list = final_list + [list_01[0:10]]   
+    final_date = []
+    for date in dates: 
+        final_date = final_date + [date[0:10]]   
     
     
-    return final_list
+    return final_date
 
 ### END FUNCTION
