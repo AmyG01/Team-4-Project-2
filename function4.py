@@ -1,10 +1,11 @@
 ### START FUNCTION
 def extract_municipality_hashtags(df):
+    
 
-  """a function which takes in a pandas dataframe and returns a modified dataframe that includes two
-   new columns that contain information about the municipality and hashtag of the tweet"""
+    """a function which takes in a pandas dataframe and returns a modified dataframe that includes two
+    new columns that contain information about the municipality and hashtag of the tweet"""
 
-   mun_list = []
+    mun_list = []
    
     for tweet in df['Tweets'] :
         mun_list_2 = []
