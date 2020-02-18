@@ -37,9 +37,6 @@ def dictionary_of_metrics(items):
 
 ### START OF FUNCTION TWO
 def five_num_summary(items):
-    """A function which takes in a list of integers and returns a dictionary of the
-    the five number summary"""
-
     sort_items = sorted(items)
     minimum = sort_items[0]
     maximum = sort_items[-1]
@@ -56,9 +53,7 @@ def five_num_summary(items):
 ### END FUNCTION
 
 ### START OF FUNCTION THREE
-def date_parser(dates):
-    """A function that takes as input a list of these datetime strings
-    and returns only the date in 'yyyy-mm-dd' format"""
+def date_parser(dates):   
     final_date = []
     for date in dates:
         final_date = final_date + [date[0:10]]
@@ -66,6 +61,7 @@ def date_parser(dates):
     
 ### END FUNCTION
 
+### START OF FUNCTION FOUR
 def extract_municipality_hashtags(df):
     mun_list = []
     for tweet in df['Tweets']:
@@ -89,5 +85,16 @@ def extract_municipality_hashtags(df):
         if len(hashtags) != 0 else np.nan)
     return df
 
+### END FUNCTION
+
+### START OF FUNCTION FIVE
+def number_of_tweets_per_day(df):  
+    final_date = []
+    for date in df['Date']:
+        final_date = final_date + [date[0:10]]
+    df = df.drop('Date', 1)
+    df['Date'] = final_date
+    no_of_tweets = df[['Date', 'Tweets']].groupby('Date').count()
+    return no_of_tweets
 
 ### END FUNCTION
