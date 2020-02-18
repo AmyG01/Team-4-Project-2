@@ -1,28 +1,11 @@
 ### START FUNCTION
 def word_splitter(df):
     
-    #spliting tweets sentences in Tweets column
-    for tweet in df['Tweets']:
-        tweet = df['Tweets'].str.split()
-
-    #forming a Series of splited tweets as a list of lists   
-    splited_tweets = pd.Series(tweet)
-
-    #adding a new column "Split Tweets" and asigning it to a series "splited_tweets"
-    df['Split Tweets'] = splited_tweets
-
-    #converting rows of "Split Tweets" column to lowercase 
-    df['Split Tweets']= df['Split Tweets'].astype(str).str.lower()
- 
+    """A function which splits the sentences in a dataframe's column into a list of the separate words"""
+    
+    result = []
+    l1 = df['Tweets']
+    for tweet in l1:
+         result.append(tweet.lower().split(' '))
+    df['Split Tweets'] = result
     return df
-
-### END FUNCTION
-
-###### Privious Solution################
-# def word_spliter(df):
-#   result = []
-#   l1 = df['Tweets']
-#   for tweet in l1:
-#     result.append(tweet.lower().split(' '))
-#   df['Split words'] = result
-#   return df
