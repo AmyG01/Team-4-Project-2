@@ -4,14 +4,14 @@ def stop_words_remover(df):
 
     
     stop_words = stop_words_dict['stopwords']
+    
+    df['Without Stop Words'] = [' '.join([w for w in x.lower().split() if w not in stop_words]) 
+    for x in df['Tweets'].tolist()]
+    
     result = []
-    l1 = df['Tweets']
+    l1 = df['Without Stop Words']
     for tweet in l1:
-        result.append(tweet.lower().split(' '))
+        result.append(tweet.split(' '))
     df['Without Stop Words'] = result
-    for the_list in df['Without Stop Words']:
-        for i in the_list :
-            if i in stop_words :
-                the_list.remove(i)
-
+    
     return df
