@@ -98,3 +98,14 @@ def number_of_tweets_per_day(df):
     return no_of_tweets
 
 ### END FUNCTION
+
+### START OF FUNCTION SIX
+def word_splitter(df):
+    result = []
+    l1 = df['Tweets']
+    for tweet in l1:
+        result.append(tweet.lower().split(' '))
+    df['Split Tweets'] = result
+    return df
+
+### END FUNCTION
