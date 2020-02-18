@@ -1,6 +1,5 @@
 ### START FUNCTION
 def stop_words_remover(df):
-
     """A function which removes english stop words from a tweet"""
     stop_words = stop_words_dict['stopwords']
 
@@ -14,5 +13,4 @@ def stop_words_remover(df):
         result.append(tweet.split(' '))
     df['Without Stop Words'] = result
     return df
-
 ### END FUNCTION
