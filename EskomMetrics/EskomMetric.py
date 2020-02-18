@@ -1,3 +1,4 @@
+#First function 
 def dictionary_of_metrics(items):
     total = 0
     count = 0
