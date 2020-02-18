@@ -1,5 +1,5 @@
 ### START FUNCTION
-def word_splitter(df):
+def word_splitter(d):
     
     """A function which splits the sentences in a dataframe's column into a list of the separate words"""
     
