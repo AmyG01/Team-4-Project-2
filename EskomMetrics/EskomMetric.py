@@ -53,12 +53,30 @@ def five_num_summary(items):
 ### END FUNCTION
 
 ### START OF FUNCTION THREE
-def date_parser(dates):   
+def date_parser(dates):
+    """
+    Convert an input list of dates from the format of 'yyyy-mm-dd' and
+    'hh:mm:ss',to an output date of the format 'yyyy-mm-dd'
+
+    Arg :
+        dates : List of strings where each element(date)
+        is in the format 'yyyy-mm-dd' and 'hh:mm:ss'
+
+    Returns :
+        final_date : A new list of strings where each element(date)
+        on the list contains only the date in the 'yyyy-mm-dd'
+        format
+
+    Examples :
+        >>>date_parser(['2019-11-29 12:50:54' ,'2017-02-04 12:46:53'
+        , '1994-07-14 12:33:36' ] )
+        ['2019-11-29','2017-02-04','1994-07-14']
+    """
     final_date = []
     for date in dates:
         final_date = final_date + [date[0:10]]
     return final_date
-    
+
 ### END FUNCTION
 
 ### START OF FUNCTION FOUR
@@ -101,6 +119,21 @@ def number_of_tweets_per_day(df):
 
 ### START OF FUNCTION SIX
 def word_splitter(df):
+    """
+    Splits the sentences of a specific dataframe column into a list of the
+    separate words
+
+    Arg :
+        df : Pandas Dataframe
+
+    Returns :
+        df : Modified original dataframe where the specific column sentences
+        are now a list of seperated lowercase words
+
+    Example :
+        >>>df.column_name = @ArthurGodbeer Is the power restored as yet?
+        [@arthurgodbeer, is, the, power, restored, as, yet, ?]
+    """
     result = []
     l1 = df['Tweets']
     for tweet in l1:
