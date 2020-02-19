@@ -42,10 +42,8 @@ def five_num_summary(items):
     five number Summary(minimum,first-quartile,median,second-quartile,maximum)
     Arg :
         items : unordered items(float/int)
-
     Returns :
             dict : a dictionary with the calculated five number summary
-    
     Example :
             >>>five_num_summary(gauteng) == {
                                             'max': 39660.0,
@@ -64,10 +62,11 @@ def five_num_summary(items):
     q1 = round(x, 2)
     med = round(y, 2)
     q3 = round(z, 2)
-    #storing the five number summary in a dictionary
+    # storing the five number summary in a dictionary
     dict = {'max': maximum, 'median': med, 'min': minimum, 'q1': q1, 'q3': q3}
 
     return dict
+
 
 ### END FUNCTION
 
@@ -111,6 +110,16 @@ def extract_municipality_hashtags(df):
     Result:
         mun_list_2 : returns a column of information about Municipality 
         hashtags   : returns a column of hashtag of the tweet
+    
+    Example:
+        >>>extract_municipality_hashtags(twitter_df.copy())
+        "return the following as a dataframe"
+        [0| @BongaDlulane Please send email to mediades...| 2019-11-29 12:50:54| NaN| NaN]
+        [1| @saucy_mamiie Pls log a call on 0860037566 2019-11-29| 12:46:53| NaN| NaN]
+        ...
+        [195| Eskom's Visitors Centresâ€™ facilities include i...| 2019-11-20| 10:29:07| NaN| NaN]
+        [196| #Eskom connected 400 houses and in the process...| 2019-11-20 10:25:20| NaN| [#eskom,
+         #eskom, #poweringyourworld]]
     """
     #instantiate an empty list for adding splitted tweet as a list
     mun_list = []
