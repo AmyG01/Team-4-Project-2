@@ -144,7 +144,6 @@ def word_splitter(df):
 ### END FUNCTION
 
 ### START OF FUNCTION SEVEN
-
 def stop_words_remover(df):
     """A function which removes english stop words from a tweet"""
     stop_words = stop_words_dict['stopwords']
