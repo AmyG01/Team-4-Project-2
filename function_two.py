@@ -5,10 +5,8 @@ def five_num_summary(items):
     five number Summary(minimum,first-quartile,median,second-quartile,maximum)
     Arg :
         items : unordered items(float/int)
-
     Returns :
             dict : a dictionary with the calculated five number summary
-    
     Example :
             >>>five_num_summary(gauteng) == {
                                             'max': 39660.0,
@@ -27,7 +25,7 @@ def five_num_summary(items):
     q1 = round(x, 2)
     med = round(y, 2)
     q3 = round(z, 2)
-    #storing the five number summary in a dictionary
+    # storing the five number summary in a dictionary
     dict = {'max': maximum, 'median': med, 'min': minimum, 'q1': q1, 'q3': q3}
 
     return dict
