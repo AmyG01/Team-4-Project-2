@@ -24,36 +24,36 @@ Python Functions which calculate Metrics using Eskom Data
 
 On the IDE window import the Eskom Metrics Package as illustrated below
 
->>> import EskomMetric as em
+>>> import EskomMetrics
 
 #### Metric Dictionary
 
->>> Call - em.dictionary_of_metrics() | Arg : List of intergers or floats
+>>> Call - EskomMetric.dictionary_of_metrics() | Arg : List of intergers or floats
 
 #### Five Number Summary
 
->>> Call - em.five_num_summary() | Arg : Unordered list of intergers or floats
+>>> Call - EskomMetric.five_num_summary() | Arg : Unordered list of intergers or floats
 
 #### Date Parser
 
->>> Call - em.date_parser() | Arg : List of strings where each element(date)
+>>> Call - EskomMetric.date_parser() | Arg : List of strings where each element(date)
         				                  is in the format 'yyyy-mm-dd' and 'hh:mm:ss'
 
 #### Municipality & Hashtag Detector
 
->>> Call - em.extract_municipality_hashtags() | Arg : A pandas dataframe as input
+>>> Call - EskomMetric.extract_municipality_hashtags() | Arg : A pandas dataframe as input
 
 #### Number of Tweets per Day
 
->>> Call - em.number_of_tweets_per_day() | Arg : A pandas dataframe as input
+>>> Call - EskomMetric.number_of_tweets_per_day() | Arg : A pandas dataframe as input
 
 #### Word Splitter
 
->>> Call - em.word_splitter() | Arg : A pandas dataframe as input
+>>> Call - EskomMetric.word_splitter() | Arg : A pandas dataframe as input
 
 #### Stop Words
 
->>> Call - em.stop_words_remover() | Arg : A pandas dataframe as input
+>>> Call - EskomMetric.stop_words_remover() | Arg : A pandas dataframe as input
 
 ## Versioning
 Git version control was used for this project.
