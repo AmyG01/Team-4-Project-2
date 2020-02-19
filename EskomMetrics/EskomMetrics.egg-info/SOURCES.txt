@@ -1,7 +1,0 @@
-README.md
-setup.py
-EskomMetrics.egg-info/PKG-INFO
-EskomMetrics.egg-info/SOURCES.txt
-EskomMetrics.egg-info/dependency_links.txt
-EskomMetrics.egg-info/requires.txt
-EskomMetrics.egg-info/top_level.txt
