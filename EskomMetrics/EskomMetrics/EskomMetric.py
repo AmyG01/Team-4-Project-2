@@ -2,6 +2,31 @@ import numpy as np
 import pandas as pd
 ### START OF FUNCTION ONE
 def dictionary_of_metrics(items):
+        ''' 
+        Returns the dictionary of calculated metrics, these include the mean,
+        median, varience, standard deviation, the minimum and maximum
+        for the given numerical list. All returned values are
+        rounded to 2 decimal places.
+
+        Args:
+            items (int or float):List of intergers or floats.
+
+
+        Returns:
+            dict:
+            dictionary of calculated metrics for the given numerical list,
+            rounded to 2 decimal places.
+
+        Examples:
+            >>>dictionary_of_metrics([5, 10.7, 25.3, 32, -1])
+            {'max': 32,
+            'mean': 14.4,
+            'median': 10.7,
+            'min': -1,
+            'std': 13.85,
+            'var': 191.95}
+        '''
+
     total = 0
     count = 0
     for value in items:
@@ -148,7 +173,29 @@ def extract_municipality_hashtags(df):
 ### END FUNCTION
 
 ### START OF FUNCTION FIVE
-def number_of_tweets_per_day(df):  
+def number_of_tweets_per_day(df):
+    '''Calculates the number of tweets posted per day
+    for a given dataframe.
+
+    Args:
+        df: Takes a pandas dataframe as input.
+
+    Returns:
+        no_of_tweets : A new dataframe, which reflects the date and the
+        corresponding number of tweets for each date.
+
+    Examples:
+        >>>Tweet : @BongaDlulane Please send an email to mediades...
+        |Date : 2019-11-29 12:50:54
+                    @saucy_mamiie Pls log a call on 0860037566
+                    | Date : 2019-11-29 12:46:53
+                    @ArthurGodbeer Is the power restored as yet?
+                    | Date : 2019-11-20 10:07:59
+
+        Date : 2019-11-29 | no_of_tweets : 2
+        Date : 2019-11-20 | no_of_tweets : 1
+        '''
+
     final_date = []
     for date in df['Date']:
         final_date = final_date + [date[0:10]]
