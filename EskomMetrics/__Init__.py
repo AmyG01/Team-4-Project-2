@@ -1,1 +1,1 @@
-from EskomMetrics import EskomMetric
+from . import EskomMetric
