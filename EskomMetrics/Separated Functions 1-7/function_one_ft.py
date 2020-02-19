@@ -1,8 +1,30 @@
 ###FUNCTION START
 def dictionary_of_metrics(items):
+        ''' 
+        Returns the dictionary of calculated metrics, these include the mean,
+        median, varience, standard deviation, the minimum and maximum
+        for the given numerical list. All returned values are
+        rounded to 2 decimal places.
 
-    """A function that calculates the mean, median, variance, standard deviation,
-    minimum and maximum of list of items"""
+        Args:
+            items (int or float):List of intergers or floats.
+
+
+        Returns:
+            dict:
+            dictionary of calculated metrics for the given numerical list,
+            rounded to 2 decimal places.
+
+        Examples:
+            >>>dictionary_of_metrics([5, 10.7, 25.3, 32, -1])
+            {'max': 32,
+            'mean': 14.4,
+            'median': 10.7,
+            'min': -1,
+            'std': 13.85,
+            'var': 191.95}
+        '''
+
     total = 0
     count = 0
     for value in items:
