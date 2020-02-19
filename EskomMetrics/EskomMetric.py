@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-#First function 
+### START OF FUNCTION ONE
 def dictionary_of_metrics(items):
     total = 0
     count = 0
@@ -143,8 +143,8 @@ def word_splitter(df):
 
 ### END FUNCTION
 
-## START FUNCTION SEVEN
-### START FUNCTION
+### START OF FUNCTION SEVEN
+
 def stop_words_remover(df):
     """A function which removes english stop words from a tweet"""
     stop_words = stop_words_dict['stopwords']
