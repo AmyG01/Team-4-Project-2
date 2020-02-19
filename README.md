@@ -5,6 +5,9 @@ Python Functions which calculate Metrics using Eskom Data
 *Python 3.7
  > Pandas Package Version 1.0
  > Numpy Package Version 1.18
+ *IDE
+ >VS Code
+ >Jupyter notebook
 
 ## Prerequisites
 *Windows OS
@@ -15,7 +18,7 @@ Python Functions which calculate Metrics using Eskom Data
 1. Initiate a Command Window ( Git Bash is recommended )
  
 2. Issue the command below to install your package from GitHub.
-   >pip install git+https://github.com/your-name/your-repo.git
+   >pip install git+https://github.com/AmyG01/Team-4-Project-2.git
 
 ## Usage
 
@@ -51,6 +54,12 @@ On the IDE window import the Eskom Metrics Package as illustrated below
 #### Stop Words
 
 >>> Call - em.stop_words_remover() | Arg : A pandas dataframe as input
+
+## Versioning
+Git version control was used for this project.
+
+## Contributing
+For any contributions you may have for this project, kindly contact any one of the team members via email.
 
 
 ## Authors
